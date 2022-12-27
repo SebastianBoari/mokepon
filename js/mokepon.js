@@ -36,7 +36,7 @@ function seleccionarMasctoaJugador(){
     sectionSeleccionarMascota.style.display = 'none'
 
     let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque');
-    sectionSeleccionarAtaque.style.display = 'block';
+    sectionSeleccionarAtaque.style.display = 'flex';
 
     let inputHipodoge = document.getElementById('hipodoge');
     let inputCapipepo = document.getElementById('capipepo');
@@ -46,13 +46,10 @@ function seleccionarMasctoaJugador(){
 
     if (inputHipodoge.checked){
         spanMascotaJugador.innerHTML = 'Hipodoge';
-        labelMascotaHipodoge.style.color = '#305973';
     } else if (inputCapipepo.checked){
         spanMascotaJugador.innerHTML = 'Capipepo';
-        labelMascotaCapipepo.style.color = '#305973';
     } else if (inputRatigueya.checked){
         spanMascotaJugador.innerHTML = 'Ratigueya';
-        labelMascotaRatigueya.style.color = '#305973';
     } else {
         alert('Selecciona una mascota');
     }    
@@ -130,26 +127,32 @@ function combate(){
 
 function revisarVidas(){
     if (vidasEnemigo == 0){
-        crearMensajeFinal('HAS GANADO');
+        crearMensajeFinal('GANASTE');
     } else if (vidasJugador == 0){
-        crearMensajeFinal('HAS PERDIDO');
+        crearMensajeFinal('PERDISTE');
     }
 }
 
 function crearMensaje(resultado) {
-    let sectionMensajes = document.getElementById('mensajes');
+    let spanAtaqueEnemigo = document.getElementById('ataque-enemigo')
+    let spanAtaqueJugador = document.getElementById('ataque-jugador');
 
-    let parrafo = document.createElement('p');
-    parrafo.innerHTML = 'Tu mascota ataco con ' + ataqueJugador + ', la mascota del enemigo ataco con ' + ataqueEnemigo + ' ' + resultado;
-    parrafo.classList.add('mensaje-creado');
+    let resultadoJugador = document.createElement('p');
+    resultadoJugador.innerHTML =  `${ataqueJugador} - ${resultado}`;
+    resultadoJugador.classList.add('resultado-jugador');
 
-    sectionMensajes.appendChild(parrafo);
+    let resultadoEnemigo = document.createElement('p');
+    resultadoEnemigo.innerHTML =  ataqueEnemigo;
+    resultadoEnemigo.classList.add('resultado-enemigo');
+
+    spanAtaqueJugador.appendChild(resultadoJugador);
+    spanAtaqueEnemigo.appendChild(resultadoEnemigo);
 
 }
 
 
 function crearMensajeFinal(resultadoFinal) {
-    let sectionMensajes = document.getElementById('mensajes');
+    let sectionMensajes = document.getElementById('resultado-final');
 
     let parrafo = document.createElement('p');
     parrafo.innerHTML = resultadoFinal;
@@ -165,7 +168,7 @@ function crearMensajeFinal(resultadoFinal) {
     botonTierra.disabled = true;
 
     let sectionReiniciar = document.getElementById('reiniciar');
-    sectionReiniciar.style.display = 'block';
+    sectionReiniciar.style.display = 'flex';
 }
 
 function reiniciarJuego(){

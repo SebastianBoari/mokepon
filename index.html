@@ -13,7 +13,7 @@
 <body>
     <section id="seleccionar-mascota">
         <div class="presentacion">
-            <img id="isologo"  src="./img/isologo.png" alt="">
+            <a href="./index.html"><img id="isologo"  src="./img/isologo.png" alt=""></a>
             <h1 class="titulo">Mokepon!</h1>
         </div>
 
@@ -54,28 +54,55 @@
         </div>
         
         <article class="seleccionar-ataque-article">
-            <h2 class="subtitulo">Selecciona tu ataque</h2>
-            
-            <div class="div-ataque">
-                <p>Tu mascota <span id="mascota-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas</p>
-                <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p>
-            </div>
+            <article class="seleccionar-ataque-article-up">
+                <h2 class="subtitulo">Selecciona tu ataque</h2>
 
-            <p class="botones-ataque">
-                <button id="boton-fuego">Fuego</button>
-                <button id="boton-agua">Agua</button>
-                <button id="boton-tierra">Tierra</button>
-            </p>
-        </article>
-        <article id="mensajes">
-        
+                <div class="botones-ataque">
+                    <button id="boton-fuego">Fuego</button>
+                    <button id="boton-agua">Agua</button>
+                    <button id="boton-tierra">Tierra</button>
+                </div>
+                <div id="resultado-final">
+    
+                </div>
+                <div id="reiniciar">
+                    <button id="boton-reiniciar">Reiniciar</button>
+                </div>
+            </article>
+            
+            <article class="paneles-ataque">
+                <div class="div-ataque-jugador">
+
+                    <h2 class="vidas-jugador"><span id="vidas-jugador">3</span></h2>
+
+                    <p class="nombre-mascota-jugador"><span id="mascota-jugador"></span></p>
+
+                    <div id="ataque-jugador">
+
+                    </div>
+                </div>
+
+                <div>
+
+                    <h2 class="versus">VS</h2>
+
+                </div>
+
+                <div class="div-ataque-enemigo">
+
+                    <h2 class="vidas-enemigo"><span id="vidas-enemigo">3</span></h2>
+
+                    <p class="nombre-mascota-enemigo"><span id="mascota-enemigo"></span></p>
+
+                    <div id="ataque-enemigo">
+
+                    </div>
+                </div>
+            </article>
         </article>
     </section>
    
 
-    <section id="reiniciar">
-        <button id="boton-reiniciar">Reiniciar</button>
-    </section>
 
     
 </body>

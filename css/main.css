@@ -12,7 +12,12 @@ body{
     display: grid;
     justify-items: center;
 }
-
+label:hover{
+    cursor: pointer;
+}
+button:hover{
+    cursor: pointer;
+}
 @keyframes movimientoMascotas{
     0% {
       transform: scale(1);
@@ -91,7 +96,7 @@ body{
     justify-content: space-between;
     align-items: center;
     gap: 164px;
-    margin: 51px 0;
+    padding-bottom: 32px;
 }
 #seleccionar-mascota .seleccionar-mascota-article .div-mascotas .div-mascota{
     display: flex;
@@ -100,6 +105,7 @@ body{
     align-items: center;
     gap: 13px;
 }
+
 #seleccionar-mascota .seleccionar-mascota-article .div-mascotas .div-mascota input{
     display: none;
 }
@@ -132,26 +138,41 @@ body{
     color: rgba(222, 213, 196, 1);
     padding: 13px 0;
 }
-
 #seleccionar-ataque .seleccionar-ataque-article{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 32px;
+}
+
+
+#seleccionar-ataque .seleccionar-ataque-article .seleccionar-ataque-article-up{
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    padding: 0px 260px;
+    padding: 32px 260px;
     background-color: rgba(239, 126, 86, 1);
     border-radius: 15px;
     -webkit-box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
     -moz-box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
     box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
 }
+#seleccionar-ataque .seleccionar-ataque-article .seleccionar-ataque-article-up #resultado-final .mensaje-final{
+    font-family: 'Bungee';
+    font-weight: 400;
+    font-size: 48px;
+    color: #305973;
+}
+
+
+
 
 #seleccionar-ataque .seleccionar-ataque-article #boton-fuego{
     padding: 0px 26px;
     font-family: bungee;
     font-size: 19px;
     background-color: rgba(48, 89, 115, 1);
-    color: rgba(239, 126, 86, 1);
+    color: rgba(222, 213, 196, 1);
     border: none;
     border-radius: 15px;
     transition: .3s;
@@ -166,7 +187,7 @@ body{
     font-family: bungee;
     font-size: 19px;
     background-color: rgba(48, 89, 115, 1);
-    color: rgba(239, 126, 86, 1);
+    color: rgba(222, 213, 196, 1);
     border: none;
     border-radius: 15px;
     transition: .3s;
@@ -181,7 +202,7 @@ body{
     font-family: bungee;
     font-size: 19px;
     background-color: rgba(48, 89, 115, 1);
-    color: rgba(239, 126, 86, 1);
+    color: rgba(222, 213, 196, 1);
     border: none;
     border-radius: 15px;
     transition: .3s;
@@ -194,7 +215,8 @@ body{
     font-family: bungee;
     font-size: 32px;
     color: rgba(222, 213, 196, 1);
-    padding: 32px;
+    padding-top: 0;
+    padding-bottom: 32px;
 }
 #seleccionar-ataque .seleccionar-ataque-article .div-ataque{
     display: flex;
@@ -217,7 +239,8 @@ body{
     justify-content: space-between;
     align-items: center;
     gap: 128px;
-    padding: 64px 0;
+    padding-top: 0;
+    padding-bottom: 32px;
 }
 
 #mensajes{
@@ -246,21 +269,85 @@ body{
     text-align: center;
     color:  rgba(239, 126, 86, 1);
 }
-#reiniciar #boton-reiniciar{
-    -webkit-box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
-    -moz-box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
-    box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
-    margin: 32px 0;
-    padding: 6px 32px;
-    font-family: bungee;
-    font-size: 19px;
-    background-color:   rgba(222, 213, 196, 1);
-    color: rgba(239, 126, 86, 1);
+#boton-reiniciar{
     border: none;
     border-radius: 15px;
-    transition: .3s;
+    padding: 0px 32px;
+    font-family: bungee;
+    font-size: 24px;
+    color: #305973;
+    background-color: rgba(222, 213, 196, 1);
 }
-#reiniciar #boton-reiniciar:hover{
+#boton-reiniciar:hover{
     color: rgba(48, 89, 115, 1);
+}
+#seleccionar-ataque .paneles-ataque{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#seleccionar-ataque .paneles-ataque .div-ataque-jugador{
+    width: 420px;
+    padding: 32px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: rgba(239, 126, 86, 1);
+    border-radius: 15px;
+}
+#seleccionar-ataque .paneles-ataque .div-ataque-jugador .vidas-jugador{
+    color: rgba(222, 213, 196, 1);
+    font-family: bungee;
+    font-size: 64px;
+    text-align: center;
+}
+#seleccionar-ataque .paneles-ataque .div-ataque-jugador .nombre-mascota-jugador{
+    color: rgba(222, 213, 196, 1);
+    font-family: bungee;
+    font-size: 36px;
+    text-align: center;
+}
+#seleccionar-ataque .paneles-ataque .div-ataque-jugador .resultado-jugador{
+    color: rgba(222, 213, 196, 1);
+    font-family: bungee;
+    font-size: 36px;
+    text-align: center;
+}
+#seleccionar-ataque .paneles-ataque .versus{
+    padding: 32px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    color: rgba(251, 251, 251, 1);
+    font-family: bungee;
+    font-size: 64px;
+}
 
+#seleccionar-ataque .paneles-ataque .div-ataque-enemigo{
+    width: 420px;
+    padding: 32px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: rgba(222, 213, 196, 1);
+    border-radius: 15px;
+}
+#seleccionar-ataque .paneles-ataque .div-ataque-enemigo .vidas-enemigo{
+    color: rgba(131, 155, 171, 1);
+    font-family: bungee;
+    font-size: 64px;
+    text-align: center;
+}
+#seleccionar-ataque .paneles-ataque .div-ataque-enemigo .nombre-mascota-enemigo{
+    color: rgba(131, 155, 171, 1);
+    font-family: bungee;
+    font-size: 36px;
+    text-align: center;
+}
+#seleccionar-ataque .paneles-ataque .div-ataque-enemigo .resultado-enemigo{
+    color: rgba(131, 155, 171, 1);
+    font-family: bungee;
+    font-size: 36px;
+    text-align: center;
 }
