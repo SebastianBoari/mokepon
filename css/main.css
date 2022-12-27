@@ -74,7 +74,7 @@ button:hover{
     font-family: bungee;
     font-size: 19px;
     background-color: rgba(48, 89, 115, 1);
-    color: rgba(239, 126, 86, 1);
+    color: rgba(222, 213, 196, 1);
     border: none;
     border-radius: 15px;
     transition: .3s;
@@ -106,13 +106,19 @@ button:hover{
     align-items: center;
     gap: 13px;
 }
-
 #seleccionar-mascota .seleccionar-mascota-article .div-mascotas .div-mascota input{
     display: none;
+}
+#seleccionar-mascota .seleccionar-mascota-article .div-mascotas .div-mascota input:checked + label{
+   color: #305973;
+   background-color: rgba(222, 213, 196, 1);
+   border-radius: 15px;
 }
 
 
 #seleccionar-mascota .seleccionar-mascota-article .div-mascotas .div-mascota label{
+    padding: 16px;
+    text-align: center;
     font-family: bungee;
     font-size: 26.4px;
     color: rgba(251, 251, 251, 1);
