@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-weight: 400;
+    font-size: 22px;
+    background-color: rgba(48, 89, 115, 1);
+    display: grid;
+    justify-items: center;
+}
+
+#seleccionar-mascota{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#seleccionar-mascota .titulo{
+    font-family: bungee shade;
+    font-size: 64px;
+    color: rgba(222, 213, 196, 1);
+    padding: 13px 0;
+}
+
+#seleccionar-mascota .seleccionar-mascota-article{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 51px 130px;
+    background-color: rgba(239, 126, 86, 1);
+    border-radius: 15px;
+    -webkit-box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
+    -moz-box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
+    box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
+}
+#seleccionar-mascota .seleccionar-mascota-article #boton-mascota{
+    padding: 0px 26px;
+    font-family: bungee;
+    font-size: 19px;
+    background-color: rgba(48, 89, 115, 1);
+    color: rgba(239, 126, 86, 1);
+    border: none;
+    border-radius: 15px;
+    transition: .3s;
+}
+#seleccionar-mascota .seleccionar-mascota-article #boton-mascota:hover{
+    color: rgba(48, 89, 115, 1);
+    background-color:   rgba(222, 213, 196, 1);
+}
+
+#seleccionar-mascota .seleccionar-mascota-article .subtitulo{
+    font-family: bungee;
+    font-size: 32px;
+    color: rgba(222, 213, 196, 1);
+    padding-bottom: 51px;
+}
+
+#seleccionar-mascota .seleccionar-mascota-article .div-mascotas{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 164px;
+    margin: 51px 0;
+}
+#seleccionar-mascota .seleccionar-mascota-article .div-mascotas .div-mascota{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 13px;
+}
+#seleccionar-mascota .seleccionar-mascota-article .div-mascotas .div-mascota input{
+    display: none;
+}
+
+
+#seleccionar-mascota .seleccionar-mascota-article .div-mascotas .div-mascota label{
+    font-family: bungee;
+    font-size: 26.4px;
+    color: rgba(251, 251, 251, 1);
+}
+
+#seleccionar-mascota .seleccionar-mascota-article .div-mascotas .div-mascota #img-mascota{
+    scale: 0.8;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////   */
+
+#seleccionar-ataque{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#seleccionar-ataque .titulo{
+    text-align: center;
+    font-family: bungee shade;
+    font-size: 64px;
+    color: rgba(222, 213, 196, 1);
+    padding: 13px 0;
+}
+
+#seleccionar-ataque .seleccionar-ataque-article{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 260px;
+    background-color: rgba(239, 126, 86, 1);
+    border-radius: 15px;
+    -webkit-box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
+    -moz-box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
+    box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
+}
+
+#seleccionar-ataque .seleccionar-ataque-article #boton-fuego{
+    padding: 0px 26px;
+    font-family: bungee;
+    font-size: 19px;
+    background-color: rgba(48, 89, 115, 1);
+    color: rgba(239, 126, 86, 1);
+    border: none;
+    border-radius: 15px;
+    transition: .3s;
+}
+#seleccionar-ataque .seleccionar-ataque-article #boton-fuego:hover{
+    color: rgba(48, 89, 115, 1);
+    background-color:   rgba(222, 213, 196, 1);
+}
+
+#seleccionar-ataque .seleccionar-ataque-article #boton-agua{
+    padding: 0px 26px;
+    font-family: bungee;
+    font-size: 19px;
+    background-color: rgba(48, 89, 115, 1);
+    color: rgba(239, 126, 86, 1);
+    border: none;
+    border-radius: 15px;
+    transition: .3s;
+}
+#seleccionar-ataque .seleccionar-ataque-article #boton-agua:hover{
+    color: rgba(48, 89, 115, 1);
+    background-color:   rgba(222, 213, 196, 1);
+}
+
+#seleccionar-ataque .seleccionar-ataque-article #boton-tierra{
+    padding: 0px 26px;
+    font-family: bungee;
+    font-size: 19px;
+    background-color: rgba(48, 89, 115, 1);
+    color: rgba(239, 126, 86, 1);
+    border: none;
+    border-radius: 15px;
+    transition: .3s;
+}
+#seleccionar-ataque .seleccionar-ataque-article #boton-tierra:hover{
+    color: rgba(48, 89, 115, 1);
+    background-color:   rgba(222, 213, 196, 1);
+}
+#seleccionar-ataque .seleccionar-ataque-article .subtitulo{
+    font-family: bungee;
+    font-size: 32px;
+    color: rgba(222, 213, 196, 1);
+    padding: 32px;
+}
+#seleccionar-ataque .seleccionar-ataque-article .div-ataque{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#seleccionar-ataque .seleccionar-ataque-article .div-ataque p{
+    font-family: bungee;
+    font-size: 16px;
+    color: rgba(222, 213, 196, 1);
+    padding: 8px;
+}
+#seleccionar-ataque .seleccionar-ataque-article .div-ataque p span{
+    color: rgba(48, 89, 115, 1);
+}
+#seleccionar-ataque .seleccionar-ataque-article .botones-ataque{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 128px;
+    padding: 64px 0;
+}
+
+#mensajes{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    background-color: rgba(235, 230, 220, 1);
+    padding: 64px;
+    margin: 64px 0;
+    border-radius: 15px;
+    -webkit-box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
+    -moz-box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
+    box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
+}
+#mensajes .mensaje-creado{
+    font-family: bungee;
+    font-size: 16px;
+    text-align: center;
+    color:  rgba(48, 89, 115, 1);
+}
+#mensajes .mensaje-final{
+    font-family: bungee;
+    font-size: 64px;
+    text-align: center;
+    color:  rgba(239, 126, 86, 1);
+}
+#reiniciar #boton-reiniciar{
+    -webkit-box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
+    -moz-box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
+    box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
+    margin: 32px 0;
+    padding: 6px 32px;
+    font-family: bungee;
+    font-size: 19px;
+    background-color:   rgba(222, 213, 196, 1);
+    color: rgba(239, 126, 86, 1);
+    border: none;
+    border-radius: 15px;
+    transition: .3s;
+}
+#reiniciar #boton-reiniciar:hover{
+    color: rgba(48, 89, 115, 1);
+
+}
