@@ -46,10 +46,13 @@ function seleccionarMasctoaJugador(){
 
     if (inputHipodoge.checked){
         spanMascotaJugador.innerHTML = 'Hipodoge';
+        labelMascotaHipodoge.style.color = '#305973';
     } else if (inputCapipepo.checked){
         spanMascotaJugador.innerHTML = 'Capipepo';
+        labelMascotaCapipepo.style.color = '#305973';
     } else if (inputRatigueya.checked){
         spanMascotaJugador.innerHTML = 'Ratigueya';
+        labelMascotaRatigueya.style.color = '#305973';
     } else {
         alert('Selecciona una mascota');
     }    
