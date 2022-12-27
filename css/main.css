@@ -295,6 +295,9 @@ button:hover{
     align-items: center;
     background-color: rgba(239, 126, 86, 1);
     border-radius: 15px;
+    -webkit-box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
+    -moz-box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
+    box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
 }
 #seleccionar-ataque .paneles-ataque .div-ataque-jugador .vidas-jugador{
     color: rgba(222, 213, 196, 1);
@@ -332,6 +335,9 @@ button:hover{
     align-items: center;
     background-color: rgba(222, 213, 196, 1);
     border-radius: 15px;
+    -webkit-box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
+    -moz-box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
+    box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
 }
 #seleccionar-ataque .paneles-ataque .div-ataque-enemigo .vidas-enemigo{
     color: rgba(131, 155, 171, 1);
