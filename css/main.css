@@ -9,8 +9,6 @@ body{
     font-weight: 400;
     font-size: 22px;
     background-color: #305973;
-    display: grid;
-    justify-items: center;
 }
 label:hover{
     cursor: pointer;
@@ -18,6 +16,7 @@ label:hover{
 button:hover{
     cursor: pointer;
 }
+
 @keyframes movimientoMascotas{
     0% {
       transform: scale(1);
@@ -37,6 +36,8 @@ button:hover{
   }
 
 #seleccionar-mascota{
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -126,6 +127,8 @@ button:hover{
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////   */
 
 #seleccionar-ataque{
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -243,32 +246,6 @@ button:hover{
     padding-bottom: 32px;
 }
 
-#mensajes{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-    background-color: rgba(235, 230, 220, 1);
-    padding: 64px;
-    margin: 64px 0;
-    border-radius: 15px;
-    -webkit-box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
-    -moz-box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
-    box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.66);
-}
-#mensajes .mensaje-creado{
-    font-family: bungee;
-    font-size: 16px;
-    text-align: center;
-    color:  rgba(48, 89, 115, 1);
-}
-#mensajes .mensaje-final{
-    font-family: bungee;
-    font-size: 64px;
-    text-align: center;
-    color:  rgba(239, 126, 86, 1);
-}
 #boton-reiniciar{
     border: none;
     border-radius: 15px;
@@ -314,7 +291,7 @@ button:hover{
 #seleccionar-ataque .paneles-ataque .div-ataque-jugador .resultado-jugador{
     color: rgba(222, 213, 196, 1);
     font-family: bungee;
-    font-size: 36px;
+    font-size: 32px;
     text-align: center;
 }
 #seleccionar-ataque .paneles-ataque .versus{
@@ -324,7 +301,7 @@ button:hover{
     align-items: center;
     color: rgba(251, 251, 251, 1);
     font-family: bungee;
-    font-size: 64px;
+    font-size: 110px;
 }
 
 #seleccionar-ataque .paneles-ataque .div-ataque-enemigo{
@@ -354,6 +331,367 @@ button:hover{
 #seleccionar-ataque .paneles-ataque .div-ataque-enemigo .resultado-enemigo{
     color: rgba(131, 155, 171, 1);
     font-family: bungee;
-    font-size: 36px;
+    font-size: 32px;
     text-align: center;
+}
+
+/* Media Queris de seleccionar mascota */
+@media(max-width: 1200px){
+    #seleccionar-mascota .presentacion{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 64px;
+    }
+    #isologo{
+        max-width: 90px;
+        position: static;
+    }
+    #seleccionar-mascota .titulo{
+        font-size: 54px;
+    }
+    #seleccionar-mascota .seleccionar-mascota-article{
+        padding: 32px 64px;
+    }
+    #seleccionar-mascota .seleccionar-mascota-article #boton-mascota{
+        color:rgba(222, 213, 196, 1);
+    }
+    #seleccionar-mascota .seleccionar-mascota-article .subtitulo{
+        font-size: 28px;
+    }
+    
+    #seleccionar-mascota .seleccionar-mascota-article .div-mascotas{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0px;
+        padding-bottom: 32px;
+    }
+    #seleccionar-mascota .seleccionar-mascota-article .div-mascotas .div-mascota label{
+        font-size: 22px;
+    }
+    #mascota-img{
+        height: 200px;
+        width: 200px;
+    }
+}
+@media(max-width: 768px){
+    #seleccionar-mascota .presentacion{
+        gap: 32px;
+    }
+    #isologo{
+        max-width: 90px;
+        position: static;
+    }
+    #seleccionar-mascota .titulo{
+        font-size: 48px;
+    }
+    #seleccionar-mascota .seleccionar-mascota-article{
+        padding: 16px 32px;
+    }
+    #seleccionar-mascota .seleccionar-mascota-article .subtitulo{
+        font-size: 26px;
+    }
+    
+    #seleccionar-mascota .seleccionar-mascota-article .div-mascotas{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0px;
+        padding-bottom: 16px;
+    }
+    #seleccionar-mascota .seleccionar-mascota-article .div-mascotas .div-mascota label{
+        font-size: 20px;
+    }
+    #mascota-img{
+        height: 170px;
+        width: 170px;
+    }
+}
+@media(max-width: 576px){
+    #seleccionar-mascota .presentacion{
+        gap: 0;
+    }
+    #isologo{
+        display: none;
+    }
+    #seleccionar-mascota .titulo{
+        margin: 0;
+        text-align: center;
+        padding: 0;
+        font-size: 36px;
+    }
+    #seleccionar-mascota .seleccionar-mascota-article{
+        padding: 8px 16px;
+    }
+    #seleccionar-mascota .seleccionar-mascota-article .subtitulo{
+        font-size: 20px;
+    }
+    #seleccionar-mascota .seleccionar-mascota-article #boton-mascota{
+        font-size: 16px;
+    }
+    
+    #seleccionar-mascota .seleccionar-mascota-article .div-mascotas{
+        padding-bottom: 12px;
+    }
+    #seleccionar-mascota .seleccionar-mascota-article .div-mascotas .div-mascota label{
+        font-size: 16px;
+    }
+    #mascota-img{
+        height: 150px;
+        width: 150px;
+    }
+}
+/*Media Queries de Seleccionar Ataque */
+
+@media(max-width: 1200px){
+    #seleccionar-ataque .presentacion{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        gap: 32px;
+
+    }
+    #seleccionar-ataque .titulo{
+        font-size: 64px;
+        color: rgba(222, 213, 196, 1);
+        padding: 0;
+    }
+        
+    #seleccionar-ataque .seleccionar-ataque-article .seleccionar-ataque-article-up{
+        margin: 0 auto;
+        width: 764px;
+        padding: 16px 32px;
+        
+    }
+    #seleccionar-ataque .seleccionar-ataque-article .seleccionar-ataque-article-up #resultado-final .mensaje-final{
+        font-size: 42px;
+    }
+    #seleccionar-ataque .seleccionar-ataque-article #boton-fuego{
+        padding: 0px 16px;
+        font-size: 16px;
+    }
+    #seleccionar-ataque .seleccionar-ataque-article #boton-agua{
+        padding: 0px 16px;
+        font-size: 16px;
+    }
+    #seleccionar-ataque .seleccionar-ataque-article #boton-tierra{
+        padding: 0px 16px;
+        font-size: 16px;
+    }
+    #seleccionar-ataque .seleccionar-ataque-article .subtitulo{
+        font-size: 28px;
+        padding-top: 0;
+        padding-bottom: 16px;
+    }
+    #seleccionar-ataque .seleccionar-ataque-article .botones-ataque{
+        gap: 64px;
+        padding-top: 0;
+        padding-bottom: 32px;
+    }
+    #boton-reiniciar{
+        padding: 0px 16px;
+        font-size: 18px;
+    }
+    #seleccionar-ataque .paneles-ataque{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-jugador{
+        width: 320px;
+        padding: 16px;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-jugador .vidas-jugador{
+        font-size: 64px;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-jugador .nombre-mascota-jugador{
+        font-size: 26px;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-jugador .resultado-jugador{
+        font-size: 20px;
+    }
+    #seleccionar-ataque .paneles-ataque .versus{
+        padding: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+    }
+    
+    #seleccionar-ataque .paneles-ataque .div-ataque-enemigo{
+        width: 320px;
+        padding: 16px;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-enemigo .vidas-enemigo{
+        font-size: 64px;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-enemigo .nombre-mascota-enemigo{
+        font-size: 26px;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-enemigo .resultado-enemigo{
+        font-size: 20px;
+    }
+    
+}
+@media(max-width: 768px){
+    #seleccionar-ataque .presentacion{
+        gap: 0;
+    }
+    #seleccionar-ataque .titulo{
+        font-size: 54px;
+    }
+    #seleccionar-ataque #isologo{
+        display: none;
+    }
+    #seleccionar-ataque .seleccionar-ataque-article .seleccionar-ataque-article-up{
+        margin: 0 auto;
+        width: 540px;
+        padding: 16px 32px;
+        
+    }
+    #seleccionar-ataque .seleccionar-ataque-article .seleccionar-ataque-article-up #resultado-final .mensaje-final{
+        font-size: 38px;
+    }
+    #seleccionar-ataque .seleccionar-ataque-article #boton-fuego{
+        padding: 0px 16px;
+        font-size: 16px;
+    }
+    #seleccionar-ataque .seleccionar-ataque-article #boton-agua{
+        padding: 0px 16px;
+        font-size: 16px;
+    }
+    #seleccionar-ataque .seleccionar-ataque-article #boton-tierra{
+        padding: 0px 16px;
+        font-size: 16px;
+    }
+    #seleccionar-ataque .seleccionar-ataque-article .subtitulo{
+        font-size: 22px;
+        padding-top: 0;
+        padding-bottom: 16px;
+    }
+    #seleccionar-ataque .seleccionar-ataque-article .botones-ataque{
+        gap: 48px;
+        padding-top: 0;
+        padding-bottom: 32px;
+    }
+    #boton-reiniciar{
+        padding: 0px 16px;
+        font-size: 16px;
+    }
+    #seleccionar-ataque .paneles-ataque{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-jugador{
+        width: 220px;
+        padding: 16px;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-jugador .vidas-jugador{
+        font-size: 64px;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-jugador .nombre-mascota-jugador{
+        font-size: 22px;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-jugador .resultado-jugador{
+        font-size: 16px;
+    }
+    #seleccionar-ataque .paneles-ataque .versus{
+        padding: 16;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+    }
+    
+    #seleccionar-ataque .paneles-ataque .div-ataque-enemigo{
+        width: 220px;
+        padding: 16px;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-enemigo .vidas-enemigo{
+        font-size: 64px;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-enemigo .nombre-mascota-enemigo{
+        font-size: 22px;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-enemigo .resultado-enemigo{
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 576px){
+    #seleccionar-ataque .titulo{
+        font-size: 36px;
+    }
+    #seleccionar-ataque .seleccionar-ataque-article .seleccionar-ataque-article-up{
+        margin: 0 auto;
+        width: 320px;
+        padding: 8px 16px;
+        
+    }
+    #seleccionar-ataque .seleccionar-ataque-article .seleccionar-ataque-article-up #resultado-final .mensaje-final{
+        font-size: 22px;
+    }
+
+    #seleccionar-ataque .seleccionar-ataque-article .subtitulo{
+        font-size: 20px;
+        padding-top: 0;
+        padding-bottom: 16px;
+    }
+    #seleccionar-ataque .seleccionar-ataque-article .botones-ataque{
+        gap: 6px;
+        padding-top: 0;
+        padding-bottom: 8px;
+    }
+    #boton-reiniciar{
+        padding: 0px 16px;
+        font-size: 14px;
+    }
+    #seleccionar-ataque .paneles-ataque{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 6px;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-jugador{
+        width: 160px;
+        padding: 0px;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-jugador .vidas-jugador{
+        font-size: 32px;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-jugador .nombre-mascota-jugador{
+        font-size: 18px;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-jugador .resultado-jugador{
+        font-size: 14px;
+    }
+    #seleccionar-ataque .paneles-ataque .versus{
+        display: none;
+    }
+    
+    #seleccionar-ataque .paneles-ataque .div-ataque-enemigo{
+        width: 160px;
+        padding: 0px;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-enemigo .vidas-enemigo{
+        font-size: 32px;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-enemigo .nombre-mascota-enemigo{
+        font-size: 18px;
+    }
+    #seleccionar-ataque .paneles-ataque .div-ataque-enemigo .resultado-enemigo{
+        font-size: 14px;
+    }
 }
