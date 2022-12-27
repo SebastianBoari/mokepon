@@ -8,10 +8,28 @@
 body{
     font-weight: 400;
     font-size: 22px;
-    background-color: rgba(48, 89, 115, 1);
+    background-color: #305973;
     display: grid;
     justify-items: center;
 }
+
+@keyframes movimientoMascotas{
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.02);
+    }
+    50% {
+      transform: scale(1);
+    }
+    75% {
+        transform: scale(0.98);
+      }
+    100% {
+      transform: scale(1);
+    }
+  }
 
 #seleccionar-mascota{
     display: flex;
@@ -19,8 +37,14 @@ body{
     justify-content: center;
     align-items: center;
 }
-
+#isologo{
+    max-width: 120px;
+    position: fixed;
+    top: 32px;
+    left: 32px; 
+}
 #seleccionar-mascota .titulo{
+    text-align: center;
     font-family: bungee shade;
     font-size: 64px;
     color: rgba(222, 213, 196, 1);
@@ -87,8 +111,10 @@ body{
     color: rgba(251, 251, 251, 1);
 }
 
-#seleccionar-mascota .seleccionar-mascota-article .div-mascotas .div-mascota #img-mascota{
-    scale: 0.8;
+#mascota-img{
+    height: 240px;
+    width: 240px;
+    animation: movimientoMascotas 1s linear infinite;
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////   */

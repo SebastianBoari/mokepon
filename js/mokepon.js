@@ -3,6 +3,8 @@ let ataqueEnemigo = "";
 let vidasJugador = 3;
 let vidasEnemigo = 3;
 
+
+
 function iniciarJuego(){
 
     let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque');
@@ -23,9 +25,13 @@ function iniciarJuego(){
 
     let botonReiniciar = document.getElementById('boton-reiniciar');
     botonReiniciar.addEventListener('click', reiniciarJuego);
+
+
 }
 
+
 function seleccionarMasctoaJugador(){
+
     let sectionSeleccionarMascota = document.getElementById('seleccionar-mascota');
     sectionSeleccionarMascota.style.display = 'none'
 
@@ -37,15 +43,19 @@ function seleccionarMasctoaJugador(){
     let inputRatigueya = document.getElementById('ratigueya');
     let spanMascotaJugador = document.getElementById('mascota-jugador');
 
+
     if (inputHipodoge.checked){
         spanMascotaJugador.innerHTML = 'Hipodoge';
+        labelMascotaHipodoge.style.color = '#305973';
     } else if (inputCapipepo.checked){
         spanMascotaJugador.innerHTML = 'Capipepo';
+        labelMascotaCapipepo.style.color = '#305973';
     } else if (inputRatigueya.checked){
         spanMascotaJugador.innerHTML = 'Ratigueya';
+        labelMascotaRatigueya.style.color = '#305973';
     } else {
         alert('Selecciona una mascota');
-    }
+    }    
     
     seleccionarMasctoaEnemigo();
 }
