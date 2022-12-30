@@ -1,0 +1,10 @@
+.header{
+    padding: $space-l 0;
+    .header__title{
+        font-family: 'Bungee Shade', cursive;
+        font-size: $maintitle;
+        color: $white;
+        text-align: center;
+        line-height: 1;
+    }
+}

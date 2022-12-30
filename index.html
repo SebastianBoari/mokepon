@@ -1,73 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">   
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="icon" href="./img/icon2.png">
+    <link rel="icon" href="./img/otros/icon2.png">
     <title>Mokepon</title>
 </head>
+
 <body>
-    <section id="seleccionar-mascota">
-        <div class="presentacion">
-            <a href="./index.html"><img id="isologo"  src="./img/isologo.png" alt=""></a>
-            <h1 class="titulo">Mokepon!</h1>
-        </div>
+<header class="header">
+    <h1 class="header__title">Mokepon</h1>
+</header>
 
-        <article class="seleccionar-mascota-article">
-            
-            <h2 class="subtitulo">Selecciona tu mascota</h2>
+<main>
+    <section id="selectPet">
+        <article class="selectPet__article">
+            <h2 class="selectPet__subtitle">Selecciona tu mascota</h2>
 
-            <div class="div-mascotas">
-                <div class="div-mascota div-hipodoge">
-                    <input type="radio" name="mascota" id="hipodoge">
-                    <label for="hipodoge">
-                        <img id="mascota-img" src="./img/hipodoge.png" alt="">
-                        <p>hipodoge</p>
-                    </label>
-                </div>
-
-                <div class="div-mascota div-capipepo">
-                    <input type="radio" name="mascota" id="capipepo">
-                    <label for="capipepo">
-                        <img id="mascota-img" src="./img/capipepo.png" alt="">
-                        <p>Capipepo</p>
-                    </label>
-                </div>
-
-                <div class="div-mascota div-ratigueya">
-                    <input type="radio" name="mascota" id="ratigueya">
-                    <label for="ratigueya">
-                        <img id="mascota-img" src="./img/ratigueya.png" alt="">
-                        <p>Ratigueya</p>
-                    </label>
-                </div>
+            <div class="selectPet__button">
+                <button id="boton-mascota" class="button--pet">Seleccionar</button>
             </div>
-
-            <p>
-                <button id="boton-mascota">Seleccionar</button>
-            </p>
+            
+            <div id="contenedor-mascotas" class="selectPet__card">
+                
+            </div>
         </article>
     </section>
-
     <section id="seleccionar-ataque">
-        <div class="presentacion">
-            <a href="./index.html"><img id="isologo"  src="./img/isologo.png" alt=""></a>
-            <h2 class="titulo">Mokepon!</h2>
-        </div>
-        
         <article class="seleccionar-ataque-article">
             <article class="seleccionar-ataque-article-up">
                 <h2 class="subtitulo">Selecciona tu ataque</h2>
 
-                <div class="botones-ataque">
-                    <button id="boton-fuego">Fuego</button>
-                    <button id="boton-agua">Agua</button>
-                    <button id="boton-tierra">Tierra</button>
+                <div id="contenedor-ataques" class="botones-ataque">
+
                 </div>
                 <div id="resultado-final">
-    
+
                 </div>
                 <div id="reiniciar">
                     <button id="boton-reiniciar">Reiniciar</button>
@@ -77,7 +47,7 @@
             <article class="paneles-ataque">
                 <div class="div-ataque-jugador">
 
-                    <h2 class="vidas-jugador"><span id="vidas-jugador">3</span></h2>
+                    <h2 class="vidas-jugador"><span id="vidas-jugador">0</span></h2>
 
                     <p class="nombre-mascota-jugador"><span id="mascota-jugador"></span></p>
 
@@ -94,7 +64,7 @@
 
                 <div class="div-ataque-enemigo">
 
-                    <h2 class="vidas-enemigo"><span id="vidas-enemigo">3</span></h2>
+                    <h2 class="vidas-enemigo"><span id="vidas-enemigo">0</span></h2>
 
                     <p class="nombre-mascota-enemigo"><span id="mascota-enemigo"></span></p>
 
@@ -105,7 +75,12 @@
             </article>
         </article>
     </section>
+</main>
 
+<footer>
+    
+</footer>
+    
     <script src="./js/mokepon.js"></script>
 </body>
 </html>
